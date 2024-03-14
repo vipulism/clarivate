@@ -15,7 +15,10 @@ export class BackButtonComponent  {
 
 
     backClicked():void {
-        this.store.dispatch(setScrollPosition({scrollPosition:window.scrollY}))
+        if(this._location.isCurrentPathEqualTo('/list')){
+            // record position if user is on list page
+            this.store.dispatch(setScrollPosition({scrollPosition:window.scrollY}))
+        }
         this._location.back();
       }
 }
