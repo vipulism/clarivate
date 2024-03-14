@@ -1,0 +1,19 @@
+<h1>Dashboard</h1>
+<div class="container">
+    <ng-container *ngIf="favList$ | async as list">
+        <ng-container *ngIf="list.length; else noItems">
+            <h4>Favorite List ({{list.length}})</h4>
+        <div class="fav-item d-flex" *ngFor="let item of favList$ | async">
+            <img [src]="item.thumbnailUrl" alt="">
+            <div>
+                <span>{{item.title}}</span>
+                <span>Id:{{item.id}}</span>
+            </div>
+            <div class="remove" (click)="remove(item)">
+                ❌
+            </div>
+        </div>
+        </ng-container>
+        <ng-template #noItems>No Items in Favorite List!</ng-template>
+    </ng-container>
+</div>

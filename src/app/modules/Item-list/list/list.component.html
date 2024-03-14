@@ -1,0 +1,11 @@
+<h1>List</h1>
+
+<div class="container">
+  <div class="row" infinite-scroll [infiniteScrollDistance]="scrollDistance" [infiniteScrollThrottle]="throttle"
+    (scrolled)="onScroll($event)">
+    <div class="col-6 justify-content-center d-flex" *ngFor="let item of list | async">
+      <item [item]="item"></item>
+    </div>
+  </div>
+  <div *ngIf="isLoading">Loading...</div>
+</div>

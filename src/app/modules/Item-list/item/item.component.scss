@@ -1,0 +1,26 @@
+:host{
+    width: 100%;
+}
+
+.list-item{
+    border: 1px solid #000;
+    margin-bottom: 20px;
+    font-size: 14px;
+    text-transform: capitalize;
+    width: 100%;
+    span {
+        padding: 5px 0;
+    }
+
+    .item-footer{
+        margin-top: auto;
+        color: #cecece;
+        font-size: 12px;
+        .fav{
+            cursor: pointer;
+            &.is-fav{
+                color: red;
+            }
+        }
+    }
+}

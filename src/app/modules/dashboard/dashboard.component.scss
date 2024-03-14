@@ -1,0 +1,19 @@
+.fav-item{
+    border: 1px solid #ececec;
+    padding: 5px;
+    img{
+        height: 40px;
+    }
+    div{
+        padding: 0 5px;
+        font-size: 14px;
+        text-transform: capitalize;
+        span{
+            display: block;
+        }
+    }
+    .remove{
+        margin-left: auto;
+        cursor: pointer;
+    }
+}

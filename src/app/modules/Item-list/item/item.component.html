@@ -1,0 +1,15 @@
+<div class="list-item p-2 d-flex">
+    <img [src]="item.thumbnailUrl" alt="" />
+    <div class="d-flex flex-column ps-2">
+      <p class="m-0">{{ item.title }}</p>
+      <div class="d-flex justify-content-between item-footer">
+        <span class="id">Item Id:{{ item.id }}</span>
+        <span
+          [class.is-fav]="item.isFav"
+          (click)="toggleFav(item)"
+          class="fav">
+            &#10084;
+        </span>
+      </div>
+    </div>
+  </div>
